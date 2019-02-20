@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, message } from 'antd';
 import { API_ROOT } from '../constants';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class RegistrationForm extends React.Component {
     state = {
@@ -30,7 +30,6 @@ class RegistrationForm extends React.Component {
                     .then((data) => {
                         console.log(data);
                         message.success('Registration Succeed!');
-                        // jump to login page if registration succeed
                         this.props.history.push('/login');
                     })
                     .catch((e) => {
@@ -131,7 +130,7 @@ class RegistrationForm extends React.Component {
                 </Form.Item>
                 <Form.Item {...tailFormItemLayout}>
                     <Button type="primary" htmlType="submit">Register</Button>
-                    <p>I already have an account, go back to <Link to="/login">Login</Link></p>
+                    <p>I already have an account, go back to <Link to="/login">login</Link> </p>
                 </Form.Item>
             </Form>
         );
